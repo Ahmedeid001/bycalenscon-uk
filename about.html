@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شماعة سيليكون 6 Hooks - زوم تريند</title>
+    <meta name="description" content="رتّبي بيتك في دقائق من غير حفر ولا دوشة مع شماعة السيليكون العملية من زوم تريند.">
+    
+    <!-- Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons: Lucide (Lightweight & Clean) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#111111', // Main Text
+                        secondary: '#6B7280', // Helper Text
+                        brand: '#F97316', // Strong Orange CTA
+                        'brand-hover': '#EA580C',
+                        surface: '#FFFFFF', // Pure White as requested
+                        'surface-alt': '#F9FAFB', // Very subtle grey for differentiation
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.04)',
+                        'card': '0 2px 8px rgba(0,0,0,0.04)',
+                    },
+                    borderRadius: {
+                        'xl': '14px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #111111;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom Accordion Transition */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+        .accordion-content.active {
+            opacity: 1;
+        }
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+        .active .rotate-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-sans pb-24 md:pb-0">
+
+    <!-- A) Header -->
+    <header class="w-full py-5 border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-4 md:px-6 max-w-6xl flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 bg-primary text-white flex items-center justify-center rounded-xl font-bold text-xl">Z</div>
+                <span class="text-xl font-bold tracking-tight">زوم تريند</span>
+            </div>
+            
+            <!-- Trust Icons (Minimal) -->
+            <div class="hidden md:flex items-center gap-6 text-sm text-secondary font-medium">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-green-600"></i>
+                    <span>ضمان الجودة</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="truck" class="w-5 h-5 text-brand"></i>
+                    <span>شحن سريع</span>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Icon (Placeholder) -->
+            <button class="md:hidden text-primary">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- B) Hero Section -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                
+                <!-- Content (Right) -->
+                <div class="w-full md:w-1/2 text-center md:text-right space-y-6">
+                    <h1 class="text-3xl md:text-5xl font-bold leading-tight md:leading-tight text-primary">
+                        رتّبي بيتك في دقائق... <br/>
+                        <span class="text-brand">من غير حفر ولا دوشة</span>
+                    </h1>
+                    <p class="text-lg text-secondary leading-relaxed max-w-lg mx-auto md:mx-0">
+                        شماعة سيليكون بـ 6 خطافات قوية... تلزق وتتشال من غير أثر، الحل السحري لتنظيم المطبخ والحمام والمفاتيح.
+                    </p>
+                    
+                    <!-- CTA Desktop -->
+                    <div class="pt-4 flex flex-col items-center md:items-start gap-5 w-full">
+                        <a href="#pricing" class="hidden md:flex items-center justify-center bg-brand hover:bg-brand-hover text-white text-xl font-bold py-4 px-12 rounded-xl shadow-lg shadow-orange-100 transition-all transform hover:-translate-y-1 w-full md:w-auto min-w-[240px]">
+                            اطلب الآن
+                        </a>
+                        
+                        <!-- Trust Points -->
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-500 font-medium">
+                            <span class="flex items-center gap-1.5 bg-gray-50 px-3 py-1 rounded-lg">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+                                شحن مجاني
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-gray-50 px-3 py-1 rounded-lg">
+                                <i data-lucide="wallet" class="w-4 h-4 text-green-500"></i>
+                                دفع عند الاستلام
+                            </span>
+                            <span class="flex items-center gap-1.5 bg-gray-50 px-3 py-1 rounded-lg">
+                                <i data-lucide="shield" class="w-4 h-4 text-green-500"></i>
+                                ضمان استبدال
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image (Left) -->
+                <div class="w-full md:w-1/2">
+                    <div class="relative bg-white rounded-xl p-2 shadow-soft border border-gray-100 aspect-square flex items-center justify-center overflow-hidden group">
+                        <!-- Placeholder for "Hero product shot (Product alone, white bg)" -->
+                        <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 text-gray-400">
+                             <i data-lucide="image" class="w-16 h-16 mb-2 opacity-50"></i>
+                             <span class="text-sm font-medium">صورة المنتج (Hero Shot)</span>
+                             <span class="text-xs text-gray-300 mt-1">منتج واضح خلفية بيضاء</span>
+                        </div>
+                        <!-- Use this img tag when you have the real image -->
+                        <!-- <img src="path/to/hero-image.jpg" alt="شماعة سيليكون 6 هوك" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- C) Social Proof -->
+    <section class="py-12 bg-surface-alt border-y border-gray-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <!-- Header -->
+            <div class="text-center mb-10 space-y-2">
+                <div class="flex justify-center items-center gap-1 text-yellow-400 mb-2">
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current text-gray-300"></i> <!-- 4.2 representation -->
+                    <span class="text-primary font-bold text-xl mr-2">4.2/5</span>
+                </div>
+                <p class="text-secondary font-medium">أكثر من <span class="text-brand font-bold">2,000</span> عميل سعيد بالمنتج</p>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-card border border-gray-50 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 font-bold">ن</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-primary">نورا محمد</h4>
+                            <div class="flex text-yellow-400 w-20">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">"كنت بدور على حاجة تنظم أدوات المطبخ بدون ما أخرم السيراميك، ولقيت الحل في الشماعة دي. فعلاً عبقرية."</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-card border border-gray-50 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 font-bold">م</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-primary">محمود خالد</h4>
+                            <div class="flex text-yellow-400 w-20">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">"ثبّتها وعلقت عليها مفاتيحي وسلسلة شنطة وطاقيتي... ثبات ممتاز وشكل شيك على باب المكتب."</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-card border border-gray-50 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 font-bold">هـ</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-primary">هالة عبد الرحمن</h4>
+                            <div class="flex text-yellow-400 w-20">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">"أحلى حاجة إنها شفافة ومش بتبان، واللزق بتاعها قوي جداً عكس الأنواع التانية اللي جربتها."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- D) Use Cases -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-primary">منظم واحد.. <span class="text-brand">استخدامات كتير</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Case 1: Kitchen -->
+                <div class="group cursor-default">
+                    <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-5 relative flex items-center justify-center border border-gray-100">
+                         <!-- Placeholder Image -->
+                         <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400">
+                             <i data-lucide="utensils" class="w-10 h-10 mb-2"></i>
+                             <span class="text-xs">صورة المطبخ (ملاعق/أدوات)</span>
+                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">في المطبخ</h3>
+                    <p class="text-secondary text-sm leading-relaxed">رتبّي المعالق، الفوط، والمغارف عشان الرخامة تفضل رايقة ونظيفة.</p>
+                </div>
+                
+                <!-- Case 2: Bathroom -->
+                <div class="group cursor-default">
+                    <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-5 relative flex items-center justify-center border border-gray-100">
+                         <!-- Placeholder Image -->
+                         <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400">
+                             <i data-lucide="bath" class="w-10 h-10 mb-2"></i>
+                             <span class="text-xs">صورة الحمام (فوطة/ليفة)</span>
+                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">في الحمام</h3>
+                    <p class="text-secondary text-sm leading-relaxed">علّقي الليفة، الفوط، وأدوات العناية الشخصية بعيد عن المية والزحمة.</p>
+                </div>
+
+                <!-- Case 3: Entrance/Office -->
+                <div class="group cursor-default">
+                    <div class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-5 relative flex items-center justify-center border border-gray-100">
+                         <!-- Placeholder Image -->
+                         <div class="absolute inset-0 flex flex-col items-center justify-center text-gray-400">
+                             <i data-lucide="key" class="w-10 h-10 mb-2"></i>
+                             <span class="text-xs">صورة المدخل (مفاتيح/شنطة)</span>
+                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">في مدخل البيت</h3>
+                    <p class="text-secondary text-sm leading-relaxed">المفاتيح، الكمامات، والشنط الخفيفة.. كل حاجة وليها مكان ثابت.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E) Why it's better (Features) -->
+    <section class="py-16 bg-surface-alt">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-primary">ليه الشماعة دي <span class="text-brand">مختلفة؟</span></h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="ban" class="w-4 h-4 text-brand"></i>
+                    </div>
+                    <h4 class="font-bold text-sm md:text-base">بدون حفر</h4>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="anchor" class="w-4 h-4 text-brand"></i>
+                    </div>
+                    <h4 class="font-bold text-sm md:text-base">6 خطافات قوية</h4>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="check" class="w-4 h-4 text-brand"></i>
+                    </div>
+                    <h4 class="font-bold text-sm md:text-base">تثبيت قوي</h4>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="refresh-cw" class="w-4 h-4 text-brand"></i>
+                    </div>
+                    <h4 class="font-bold text-sm md:text-base">بدون أثر عند الفك</h4>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="minimize" class="w-4 h-4 text-brand"></i>
+                    </div>
+                    <h4 class="font-bold text-sm md:text-base">للمساحات الصغيرة</h4>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-brand"></i>
+                    </div>
+                    <h4 class="font-bold text-sm md:text-base">شكل أنيق</h4>
+                </div>
+            </div>
+            
+            <p class="text-center text-xs md:text-sm text-secondary mt-8 bg-white border border-gray-100 inline-block px-4 py-2 rounded-full mx-auto flex items-center gap-2 max-w-fit">
+                <i data-lucide="info" class="w-4 h-4"></i>
+                تتحمل استخدام يومي قوي في الظروف العادية
+            </p>
+        </div>
+    </section>
+
+    <!-- F) How to Install -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-16 text-primary">طريقة التركيب <span class="text-brand">في 3 خطوات</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-6 right-16 left-16 h-0.5 bg-gray-100 -z-10"></div>
+                
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-brand text-brand rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm z-10">1</div>
+                    <div class="w-full max-w-[200px] aspect-square bg-gray-50 rounded-xl mb-4 flex items-center justify-center border border-gray-100">
+                         <!-- Placeholder -->
+                         <span class="text-xs text-gray-400">صورة التنظيف</span>
+                    </div>
+                    <h3 class="font-bold mb-1 text-lg">نظّف السطح</h3>
+                    <p class="text-sm text-secondary">نظف المكان وجففه تماماً.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-brand text-brand rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm z-10">2</div>
+                    <div class="w-full max-w-[200px] aspect-square bg-gray-50 rounded-xl mb-4 flex items-center justify-center border border-gray-100">
+                         <!-- Placeholder -->
+                         <span class="text-xs text-gray-400">صورة اللزق والضغط</span>
+                    </div>
+                    <h3 class="font-bold mb-1 text-lg">إلزق واضغط</h3>
+                    <p class="text-sm text-secondary">اضغط بقوة لمدة 20-30 ثانية.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-brand text-brand rounded-full flex items-center justify-center font-bold text-xl mb-6 shadow-sm z-10">3</div>
+                    <div class="w-full max-w-[200px] aspect-square bg-gray-50 rounded-xl mb-4 flex items-center justify-center border border-gray-100">
+                         <!-- Placeholder -->
+                         <span class="text-xs text-gray-400">صورة التعليق</span>
+                    </div>
+                    <h3 class="font-bold mb-1 text-lg">استخدمها</h3>
+                    <p class="text-sm text-secondary">علّق أغراضك واستمتع بالتنظيم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- G) Pricing Tiers -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">اختر العرض المناسب ليك</h2>
+                <p class="text-secondary">أفضل العروض والخصومات لفترة محدودة</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+                
+                <!-- Tier 1: 3 Pieces -->
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm order-2 md:order-1">
+                    <h3 class="text-xl font-bold text-center mb-4 text-primary">عرض التوفير</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-primary">270</span>
+                        <span class="text-sm text-secondary font-medium">جنية</span>
+                        <div class="text-sm text-gray-500 mt-2">3 قطع (90ج / قطعة)</div>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> شحن مجاني</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> دفع عند الاستلام</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> ضمان استبدال</li>
+                    </ul>
+                    <a href="#order-form" class="block w-full py-3 border-2 border-primary text-primary font-bold text-center rounded-lg hover:bg-gray-50 transition-colors">
+                        اختار العرض
+                    </a>
+                </div>
+
+                <!-- Tier 2: 6 Pieces (Most Popular) -->
+                <div class="relative bg-white rounded-xl p-8 border-2 border-brand shadow-xl order-1 md:order-2 transform md:-translate-y-4">
+                    <div class="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-brand text-white px-4 py-1 rounded-full text-sm font-bold shadow-md whitespace-nowrap">
+                        الأكثر طلبًا 🔥
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-primary">عرض البيت الكامل</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-5xl font-bold text-brand">420</span>
+                        <span class="text-base text-secondary font-medium">جنية</span>
+                        <div class="text-sm text-green-600 font-bold mt-2">6 قطع (70ج / قطعة)</div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-700 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> توفير 120 جنية</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> شحن سريع مجاني</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> دفع عند الاستلام</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> أولوية الشحن</li>
+                    </ul>
+                    <a href="#order-form" class="block w-full py-4 bg-brand text-white font-bold text-center rounded-xl hover:bg-brand-hover shadow-lg shadow-orange-200 transition-all transform hover:scale-[1.02]">
+                        اختار العرض واطلب الآن
+                    </a>
+                </div>
+
+                <!-- Tier 3: 9 Pieces (Best Value) -->
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm order-3 md:order-3">
+                    <div class="text-center mb-2">
+                         <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-md">الأكثر توفيرًا 💰</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4 text-primary">عرض العيلة</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-primary">540</span>
+                        <span class="text-sm text-secondary font-medium">جنية</span>
+                        <div class="text-sm text-green-600 font-bold mt-2">9 قطع (60ج / قطعة)</div>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> توفير 270 جنية!</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> شحن مجاني</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> هدية مثالية</li>
+                    </ul>
+                    <a href="#order-form" class="block w-full py-3 border-2 border-primary text-primary font-bold text-center rounded-lg hover:bg-gray-50 transition-colors">
+                        اختار العرض
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- H) FAQ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-primary">أسئلة متكررة</h2>
+            
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="border border-gray-100 rounded-xl overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-right" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-primary">ينفع تلزق على سيراميك أو خشب؟</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 rotate-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-sm text-secondary leading-relaxed border-t border-gray-100">
+                            أيوه، الشماعة مصممة عشان تلزق بقوة على السطوح الملساء زي السيراميك، الرخام، الزجاج، الخشب المدهون، وحتى المعدن. أهم حاجة السطح يكون نظيف وجاف.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="border border-gray-100 rounded-xl overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-right" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-primary">بتتشال ازاي من غير أثر؟</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 rotate-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-sm text-secondary leading-relaxed border-t border-gray-100">
+                            ممكن تشيليها بسهولة عن طريق تسخينها شوية بالسيشوار وبعدين فكها من الطرف ببطء، مش هتسيب أي أثر لزق على الحيطة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="border border-gray-100 rounded-xl overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-right" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-primary">ينفع استخدمها في الحمام مع البخار؟</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 rotate-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-sm text-secondary leading-relaxed border-t border-gray-100">
+                            أكيد، الخامة مقاومة للرطوبة والمية، ومناسبة جداً للاستخدام في الحمام لتعليق الفوط والليف.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="border border-gray-100 rounded-xl overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-right" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-primary">الشحن بياخد وقت قد إيه؟</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 rotate-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-sm text-secondary leading-relaxed border-t border-gray-100">
+                            التوصيل عادة بياخد من 2 لـ 4 أيام عمل حسب المحافظة. وهيوصلك مندوبنا لحد باب البيت.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="border border-gray-100 rounded-xl overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-right" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-primary">الدفع إزاي؟</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 rotate-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-sm text-secondary leading-relaxed border-t border-gray-100">
+                            الدفع بيكون "كاش" عند الاستلام، يعني مش هتدفع أي حاجة غير لما تستلم المنتج وتتأكد منه.
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Q6 -->
+                <div class="border border-gray-100 rounded-xl overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-right" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-primary">ايه نظام الاستبدال والضمان؟</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 rotate-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-sm text-secondary leading-relaxed border-t border-gray-100">
+                            بنقدملك ضمان استبدال لمدة 14 يوم لو المنتج فيه أي عيب صناعة. هدفنا رضاك 100%.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- I) Final CTA -->
+    <section class="py-12 bg-surface-alt text-center pb-24 md:pb-12">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+                <i data-lucide="package-check" class="w-10 h-10 text-brand"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-4">جاهز تنظم بيتك؟</h2>
+            <p class="text-secondary mb-8">شحن مجاني + دفع عند الاستلام لجميع المحافظات</p>
+            <a href="#pricing" class="inline-block w-full md:w-auto bg-brand hover:bg-brand-hover text-white text-xl font-bold py-4 px-12 rounded-xl shadow-lg shadow-orange-200 transition-transform transform hover:-translate-y-1">
+                اطلب الآن
+            </a>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky Button -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden z-40">
+        <a href="#pricing" class="block w-full bg-brand text-white font-bold text-lg py-3 rounded-xl text-center shadow-md">
+            اطلب الآن
+        </a>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Accordion Logic
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.rotate-icon');
+            
+            // Close other open accordions (Optional - Single Open Mode)
+            /*
+            document.querySelectorAll('.accordion-content').forEach(c => {
+                if (c !== content) {
+                    c.style.maxHeight = null;
+                    c.style.opacity = 0;
+                    c.previousElementSibling.querySelector('.rotate-icon').style.transform = 'rotate(0deg)';
+                }
+            });
+            */
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.opacity = 0;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.opacity = 1;
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
