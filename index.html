@@ -346,557 +346,7 @@
                 <p class="text-gray-400">الشحن مجاني بالكامل لفترة محدودة</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                
-                <!-- Tier 1: 3 Pieces -->
-                <div class="bg-gray-800 rounded-3xl p-6 border border-gray-700 flex flex-col hover:border-gray-500 transition relative">
-                    <h3 class="text-xl font-bold text-gray-300 mb-2">عرض التجربة</h3>
-                    <p class="text-3xl font-extrabold mb-1">270 <span class="text-sm font-normal">ج.م</span></p>
-                    <p class="text-sm text-gray-400 mb-6">3 قطع (90ج للقطعة)</p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-300 flex-1">
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> شحن مجاني</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> دفع عند الاستلام</li>
-                    </ul>
-                    <a href="#form" onclick="selectOffer('3pcs', 270)" class="w-full block text-center bg-gray-700 hover:bg-gray-600 py-3 rounded-xl font-bold transition">اطلب 3 قطع</a>
-                </div>
-
-                <!-- Tier 2: 6 Pieces (Best Seller) -->
-                <div class="bg-white text-gray-900 rounded-3xl p-6 border-4 border-brand-primary transform md:-translate-y-4 shadow-2xl shadow-blue-900/50 flex flex-col relative">
-                    <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
-                        <span class="bg-brand-primary text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">الأكثر طلباً 🔥</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-black mb-2 mt-2">عرض العائلات</h3>
-                    <p class="text-4xl font-extrabold mb-1 text-brand-primary">420 <span class="text-sm font-normal text-gray-600">ج.م</span></p>
-                    <p class="text-sm text-gray-500 mb-6 font-semibold">6 قطع (70ج للقطعة)</p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-600 flex-1 font-medium">
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-600"></i> توفير ممتاز للسعر</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-600"></i> شحن مجاني سريع</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-600"></i> دفع عند الاستلام</li>
-                    </ul>
-                    <a href="#form" onclick="selectOffer('6pcs', 420)" class="w-full block text-center bg-brand-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl">اطلب 6 قطع (الأفضل)</a>
-                </div>
-
-                <!-- Tier 3: 9 Pieces (Best Savings) -->
-                <div class="bg-gray-800 rounded-3xl p-6 border border-gray-700 flex flex-col hover:border-gray-500 transition relative">
-                    <div class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">توفير ضخم</div>
-                    <h3 class="text-xl font-bold text-gray-300 mb-2">عرض التوفير</h3>
-                    <p class="text-3xl font-extrabold mb-1">540 <span class="text-sm font-normal">ج.م</span></p>
-                    <p class="text-sm text-gray-400 mb-6">9 قطع (60ج للقطعة)</p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-300 flex-1">
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> أرخص سعر للقطعة</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> يكفي البيت كله</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> شحن مجاني</li>
-                    </ul>
-                    <a href="#form" onclick="selectOffer('9pcs', 540)" class="w-full block text-center bg-gray-700 hover:bg-gray-600 py-3 rounded-xl font-bold transition">اطلب 9 قطع</a>
-                </div>
-
-            </div>
-
-            <!-- Order Form Placeholder -->
-            <div id="form" class="max-w-lg mx-auto bg-white rounded-2xl p-6 md:p-8 mt-12 text-gray-900 shadow-2xl">
-                <h3 class="text-2xl font-bold text-center mb-6">أكملي بياناتك لتأكيد الطلب</h3>
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('شكراً لطلبك! سنتصل بك قريباً.');">
-                    
-                    <!-- Hidden Input for selected offer -->
-                    <input type="hidden" id="selected-offer" name="offer" value="6pcs">
-
-                    <div>
-                        <label class="block text-sm font-bold mb-2">الاسم بالكامل</label>
-                        <input type="text" placeholder="اكتبي اسمك هنا" class="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">رقم الموبايل</label>
-                        <input type="tel" placeholder="01xxxxxxxxx" class="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">العنوان</label>
-                        <input type="text" placeholder="المحافظة - المنطقة - اسم الشارع" class="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition" required>
-                    </div>
-
-                    <button type="submit" class="w-full bg-brand-cta text-white font-bold text-xl py-4 rounded-xl shadow-lg hover:bg-green-700 transition mt-2">
-                        تأكيد الطلب (الدفع عند الاستلام)
-                    </button>
-                    <p class="text-center text-xs text-gray-400 mt-2"><i class="ph-fill ph-lock-key"></i> بياناتك آمنة 100%</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- H) FAQ -->
-    <section class="py-16 bg-white">
-        <div class="max-w-2xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-8">أسئلة يتكرر طرحها</h2>
-            <div class="space-y-4">
-                
-                <details class="group bg-brand-light rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
-                        ينفع أركبها على سيراميك أو خشب؟
-                        <span class="transition group-open:rotate-180"><i class="ph-bold ph-caret-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 mt-3 text-sm leading-relaxed">
-                        طبعاً، الشماعة بتلزق بقوة على السيراميك، الرخام، الزجاج، الخشب، والمعدن. أهم حاجة يكون السطح ناعم ونظيف.
-                    </p>
-                </details>
-
-                <details class="group bg-brand-light rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
-                        بتتشال ازاي من غير أثر؟
-                        <span class="transition group-open:rotate-180"><i class="ph-bold ph-caret-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 mt-3 text-sm leading-relaxed">
-                        بسهولة جداً، بتسلطي عليها حرارة بسيطة (زي استشوار) وبتتشال معاكي من غير ما تسيب أي صمغ أو علامة.
-                    </p>
-                </details>
-
-                <details class="group bg-brand-light rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
-                        ينفع في الحمّام مع بخار الماية؟
-                        <span class="transition group-open:rotate-180"><i class="ph-bold ph-caret-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 mt-3 text-sm leading-relaxed">
-                        أكيد، المادة اللاصقة مقاومة للماء والرطوبة، ومناسبة جداً للاستخدام جوا كابينة الشاور أو جنب الحوض.
-                    </p>
-                </details>
-                
-                <details class="group bg-brand-light rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
-                        الدفع بيكون ازاي؟
-                        <span class="transition group-open:rotate-180"><i class="ph-bold ph-caret-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 mt-3 text-sm leading-relaxed">
-                        الدفع بيكون عند الاستلام، يعني مش هتدفعي أي حاجة غير لما المنتج يوصلك وتستلميه بنفسك.
-                    </p>
-                </details>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- I) Final CTA + Sticky Button -->
-    <section class="py-12 bg-gray-50 border-t border-gray-200 mb-16 md:mb-0">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-4">جاهزة لبيت أرتب وأنظم؟</h2>
-            <p class="text-gray-500 mb-6">الكميات بتخلص بسرعة، الحقي العرض قبل النفاذ</p>
-            <div class="flex justify-center items-center gap-4 text-sm font-semibold text-gray-600 mb-6">
-                <span><i class="ph-fill ph-truck text-brand-primary"></i> شحن مجاني</span>
-                <span><i class="ph-fill ph-hand-coins text-brand-primary"></i> دفع عند الاستلام</span>
-            </div>
-            <a href="#pricing" class="inline-block bg-brand-black text-white px-8 py-3 rounded-xl font-bold hover:bg-gray-800 transition">اطلب العرض المناسب ليكي الآن</a>
-        </div>
-    </section>
-
-    <!-- Sticky Mobile Button -->
-    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 md:hidden z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.1)]">
-        <a href="#pricing" class="block w-full bg-brand-cta text-white text-center font-bold py-3.5 rounded-xl shadow-lg text-lg flex justify-center items-center gap-2">
-            اطلب الآن <span class="text-sm font-normal opacity-90">(الشحن مجاني)</span>
-        </a>
-    </div>
-
-    <!-- Scripts -->
-    <script>
-        function selectOffer(offerId, price) {
-            // Simple logic to scroll to form and highlight input could go here
-            document.getElementById('selected-offer').value = offerId;
-            // Scroll smooth to form
-            document.querySelector('#form').scrollIntoView({ 
-                behavior: 'smooth' 
-            });
-        }
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شماعة سيليكون 6 Hooks - زوم تريند</title>
-    
-    <!-- الخطوط: Cairo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- أيقونات (Phosphor Icons) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            black: '#111111',
-                            gray: '#6B7280',
-                            light: '#F9FAFB',
-                            primary: '#0066cc', // لون البراند من الملف الأصلي
-                            cta: '#16a34a', // لون أخضر قوي للتحويل
-                        }
-                    },
-                    boxShadow: {
-                        'soft': '0 8px 30px -4px rgba(0, 0, 0, 0.04)',
-                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)',
-                    },
-                    borderRadius: {
-                        'card': '14px',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #ffffff;
-            color: #111111;
-            overflow-x: hidden;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        /* تحسين مظهر السكرول بار */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ccc;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #aaa;
-        }
         
-        .glass-header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-    </style>
-</head>
-<body class="bg-white text-[#111]">
-
-    <!-- A) Header بسيط -->
-    <nav class="w-full py-4 border-b border-gray-100 sticky top-0 glass-header z-50">
-        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <!-- Logo Area -->
-            <div class="flex items-center gap-2">
-                <span class="text-2xl font-black tracking-tighter text-brand-primary">Zoom Trend</span>
-            </div>
-            
-            <!-- Trust Icons (Desktop) -->
-            <div class="hidden md:flex items-center gap-6 text-xs font-semibold text-brand-gray">
-                <div class="flex items-center gap-1.5">
-                    <i class="ph-fill ph-truck text-lg text-brand-black"></i>
-                    شحن مجاني
-                </div>
-                <div class="flex items-center gap-1.5">
-                    <i class="ph-fill ph-money text-lg text-brand-black"></i>
-                    دفع عند الاستلام
-                </div>
-            </div>
-
-            <!-- CTA Small -->
-            <a href="#pricing" class="bg-brand-black text-white px-5 py-2 rounded-xl font-bold text-sm hover:bg-gray-800 transition hidden md:block">
-                اطلب الآن
-            </a>
-        </div>
-    </nav>
-
-    <!-- B) Hero Section -->
-    <header class="relative pt-10 pb-16 md:pt-20 md:pb-24">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-            
-            <!-- Content -->
-            <div class="order-2 md:order-1 text-center md:text-right space-y-6">
-                <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold border border-blue-100">
-                    <i class="ph-fill ph-star"></i>
-                    المنتج الأكثر طلباً لتنظيم البيت
-                </div>
-                
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-brand-black">
-                    رتّبي بيتك في دقائق… <br>
-                    <span class="text-brand-primary">من غير حفر ولا دوشة</span>
-                </h1>
-                
-                <p class="text-lg text-brand-gray leading-relaxed max-w-lg mx-auto md:mx-0">
-                    شماعة سيليكون بـ 6 خطافات قوية… تلزق وتثبت بقوة، ولما تحبي تشيليها بتتشال من غير ما تسيب أي أثر على الحيطة.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-                    <a href="#pricing" class="bg-brand-cta text-white text-xl font-bold px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 w-full md:w-auto">
-                        <span>اطلب الآن</span>
-                        <i class="ph-bold ph-arrow-left"></i>
-                    </a>
-                </div>
-
-                <!-- Trust Points Small -->
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-500 font-medium pt-2">
-                    <span class="flex items-center gap-1"><i class="ph-fill ph-check-circle text-green-500"></i> شحن مجاني</span>
-                    <span class="flex items-center gap-1"><i class="ph-fill ph-check-circle text-green-500"></i> دفع عند الاستلام</span>
-                    <span class="flex items-center gap-1"><i class="ph-fill ph-check-circle text-green-500"></i> ضمان استبدال</span>
-                </div>
-            </div>
-
-            <!-- Hero Image -->
-            <div class="order-1 md:order-2 relative group">
-                <!-- Background decoration -->
-                <div class="absolute inset-0 bg-gray-50 rounded-[40px] transform rotate-3 scale-95 -z-10 transition group-hover:rotate-1"></div>
-                
-                <div class="bg-white p-4 rounded-[30px] shadow-soft border border-gray-100">
-                    <!-- استخدام صورة المنتج الأساسية من الملف المرفق -->
-                    <img src="images/1757017007634653288.png" alt="شماعة سيليكون 6 هوك" class="w-full h-auto rounded-2xl object-cover bg-gray-50 aspect-square md:aspect-[4/3]">
-                    
-                    <!-- Floating Feature -->
-                    <div class="absolute -bottom-4 -left-4 bg-white p-3 rounded-xl shadow-lg border border-gray-50 flex items-center gap-3 animate-bounce hidden md:flex">
-                        <div class="bg-blue-100 p-2 rounded-full text-blue-600">
-                            <i class="ph-fill ph-shield-check text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-500 font-bold">تثبيت قوي</p>
-                            <p class="text-sm font-black">بدون حفر</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- C) Social Proof Strip -->
-    <section class="border-y border-gray-100 py-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <!-- Header of section -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-3 mb-8 text-center">
-                <div class="flex text-yellow-400 text-xl">
-                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i>
-                </div>
-                <p class="font-bold text-gray-800">تقييم 4.2 من 5 نجوم <span class="text-gray-400 mx-2">|</span> أكثر من 2,000 عميل بيستخدموها</p>
-            </div>
-
-            <!-- Review Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white p-6 rounded-card shadow-card border border-gray-100">
-                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">"ركبتها في الحمام بسهولة جدا علقت الفوطة والليفة، ولسه ثابتة مكانها من أسبوعين. شكرا على منتج عملي."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600 text-xs">ن</div>
-                        <div>
-                            <p class="text-sm font-bold text-brand-black">نورا محمد</p>
-                            <p class="text-xs text-brand-gray">عميل مؤكد ✅</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-white p-6 rounded-card shadow-card border border-gray-100">
-                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">"ثبّتها وعلقت عليها مفاتيحي وسلسلة شنطة وطاقيتي... ثبات ممتاز وشكل شيك على باب المكتب."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-600 text-xs">م</div>
-                        <div>
-                            <p class="text-sm font-bold text-brand-black">محمود خالد</p>
-                            <p class="text-xs text-brand-gray">عميل مؤكد ✅</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-white p-6 rounded-card shadow-card border border-gray-100">
-                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">"كنت بدور على حاجة تنظم أدوات المطبخ بدون ما أخرم السيراميك، ولقيت الحل في الشماعة دي."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center font-bold text-purple-600 text-xs">هـ</div>
-                        <div>
-                            <p class="text-sm font-bold text-brand-black">هالة عبد الرحمن</p>
-                            <p class="text-xs text-brand-gray">عميل مؤكد ✅</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- D) Use Cases (صور الاستخدام) -->
-    <section class="py-16 md:py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-3">شماعة واحدة.. حلول كتير</h2>
-                <p class="text-gray-500">منظمة وعملية في كل ركن في البيت</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Use Case 1: Kitchen -->
-                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-auto md:h-80">
-                    <img src="images/1757103805805108858.png" alt="استخدام المطبخ" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <div class="text-white">
-                            <h3 class="font-bold text-xl mb-1">للمطبخ</h3>
-                            <p class="text-sm text-gray-200">نظمي المعالق والمغارف والأدوات</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Use Case 2: Bathroom -->
-                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-auto md:h-80">
-                    <img src="images/1757104886128597325.png" alt="استخدام الحمام" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <div class="text-white">
-                            <h3 class="font-bold text-xl mb-1">للحمّام</h3>
-                            <p class="text-sm text-gray-200">للفوط، الليف، وأدوات العناية</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Use Case 3: Office/Entrance -->
-                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-auto md:h-80">
-                    <img src="images/1757105237886081324.png" alt="استخدام المدخل" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                        <div class="text-white">
-                            <h3 class="font-bold text-xl mb-1">للمدخل والمكتب</h3>
-                            <p class="text-sm text-gray-200">للمفاتيح، الكمامات، والشنط الخفيفة</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- E) Why it’s better (Features) -->
-    <section class="py-16 bg-brand-light">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10">ليه هي الأفضل؟</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Feature 1 -->
-                <div class="bg-white p-5 rounded-card shadow-sm border border-gray-100 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl"><i class="ph-duotone ph-wall"></i></div>
-                    <span class="font-bold text-gray-800">بدون حفر أو مسامير</span>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-white p-5 rounded-card shadow-sm border border-gray-100 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl"><i class="ph-duotone ph-hooks"></i></div>
-                    <span class="font-bold text-gray-800">6 خطافات قوية</span>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-white p-5 rounded-card shadow-sm border border-gray-100 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl"><i class="ph-duotone ph-shield-check"></i></div>
-                    <span class="font-bold text-gray-800">تثبيت قوي ومتين</span>
-                </div>
-                <!-- Feature 4 -->
-                <div class="bg-white p-5 rounded-card shadow-sm border border-gray-100 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl"><i class="ph-duotone ph-magic-wand"></i></div>
-                    <span class="font-bold text-gray-800">تتفك بسهولة وبدون أثر</span>
-                </div>
-                <!-- Feature 5 -->
-                <div class="bg-white p-5 rounded-card shadow-sm border border-gray-100 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl"><i class="ph-duotone ph-arrows-in"></i></div>
-                    <span class="font-bold text-gray-800">مناسبة للمساحات الصغيرة</span>
-                </div>
-                <!-- Feature 6 -->
-                <div class="bg-white p-5 rounded-card shadow-sm border border-gray-100 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl"><i class="ph-duotone ph-sparkle"></i></div>
-                    <span class="font-bold text-gray-800">شكل أنيق يناسب أي ديكور</span>
-                </div>
-            </div>
-            <div class="mt-8 text-center">
-                <p class="text-sm text-gray-500 bg-white inline-block px-4 py-2 rounded-full border border-gray-200 shadow-sm">
-                    <i class="ph-fill ph-info text-blue-500 mr-1"></i>
-                    تتحمل الاستخدام اليومي القوي بشكل آمن وممتاز
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- F) How to Install -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">تركيبها في 3 خطوات بس</h2>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative">
-                <!-- Line Desktop -->
-                <div class="hidden md:block absolute top-8 right-0 left-0 h-0.5 bg-gray-100 -z-10 w-3/4 mx-auto"></div>
-
-                <!-- Step 1 -->
-                <div class="w-full md:w-1/3 flex flex-col items-center">
-                    <div class="w-16 h-16 bg-brand-black text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-4 shadow-lg border-4 border-white">1</div>
-                    <h3 class="font-bold text-lg mb-2">نضفي المكان</h3>
-                    <p class="text-gray-500 text-sm px-4">امسحي السطح كويس وجففيه عشان اللزق يمسك 100%</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="w-full md:w-1/3 flex flex-col items-center">
-                    <div class="w-16 h-16 bg-brand-black text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-4 shadow-lg border-4 border-white">2</div>
-                    <h3 class="font-bold text-lg mb-2">إلزقيها</h3>
-                    <p class="text-gray-500 text-sm px-4">شيلي الغطاء الخلفي، الزقيها، واضغطي عليها لمدة 30 ثانية</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="w-full md:w-1/3 flex flex-col items-center">
-                    <div class="w-16 h-16 bg-brand-black text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-4 shadow-lg border-4 border-white">3</div>
-                    <h3 class="font-bold text-lg mb-2">استني وعلّقي</h3>
-                    <p class="text-gray-500 text-sm px-4">يفضل تسيبيها ساعة قبل التعليق لنتيجة مضمونة</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- G) Pricing Tiers (The Most Important Section) -->
-    <section id="pricing" class="py-16 md:py-24 bg-gray-900 text-white relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
-
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">اختاري العرض المناسب ليكي 🔥</h2>
-                <p class="text-gray-400">الشحن مجاني بالكامل لفترة محدودة</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                
-                <!-- Tier 1: 3 Pieces -->
-                <div class="bg-gray-800 rounded-3xl p-6 border border-gray-700 flex flex-col hover:border-gray-500 transition relative">
-                    <h3 class="text-xl font-bold text-gray-300 mb-2">عرض التجربة</h3>
-                    <p class="text-3xl font-extrabold mb-1">270 <span class="text-sm font-normal">ج.م</span></p>
-                    <p class="text-sm text-gray-400 mb-6">3 قطع (90ج للقطعة)</p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-300 flex-1">
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> شحن مجاني</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> دفع عند الاستلام</li>
-                    </ul>
-                    <a href="#form" onclick="selectOffer('3pcs', 270)" class="w-full block text-center bg-gray-700 hover:bg-gray-600 py-3 rounded-xl font-bold transition">اطلب 3 قطع</a>
-                </div>
-
-                <!-- Tier 2: 6 Pieces (Best Seller) -->
-                <div class="bg-white text-gray-900 rounded-3xl p-6 border-4 border-brand-primary transform md:-translate-y-4 shadow-2xl shadow-blue-900/50 flex flex-col relative">
-                    <div class="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
-                        <span class="bg-brand-primary text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">الأكثر طلباً 🔥</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-black mb-2 mt-2">عرض العائلات</h3>
-                    <p class="text-4xl font-extrabold mb-1 text-brand-primary">420 <span class="text-sm font-normal text-gray-600">ج.م</span></p>
-                    <p class="text-sm text-gray-500 mb-6 font-semibold">6 قطع (70ج للقطعة)</p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-600 flex-1 font-medium">
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-600"></i> توفير ممتاز للسعر</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-600"></i> شحن مجاني سريع</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-600"></i> دفع عند الاستلام</li>
-                    </ul>
-                    <a href="#form" onclick="selectOffer('6pcs', 420)" class="w-full block text-center bg-brand-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl">اطلب 6 قطع (الأفضل)</a>
-                </div>
-
-                <!-- Tier 3: 9 Pieces (Best Savings) -->
-                <div class="bg-gray-800 rounded-3xl p-6 border border-gray-700 flex flex-col hover:border-gray-500 transition relative">
-                    <div class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">توفير ضخم</div>
-                    <h3 class="text-xl font-bold text-gray-300 mb-2">عرض التوفير</h3>
-                    <p class="text-3xl font-extrabold mb-1">540 <span class="text-sm font-normal">ج.م</span></p>
-                    <p class="text-sm text-gray-400 mb-6">9 قطع (60ج للقطعة)</p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-300 flex-1">
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> أرخص سعر للقطعة</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> يكفي البيت كله</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-green-500"></i> شحن مجاني</li>
-                    </ul>
-                    <a href="#form" onclick="selectOffer('9pcs', 540)" class="w-full block text-center bg-gray-700 hover:bg-gray-600 py-3 rounded-xl font-bold transition">اطلب 9 قطع</a>
-                </div>
-
-            </div>
 
             <!-- Order Form Placeholder -->
             <div id="form" class="max-w-lg mx-auto bg-white rounded-2xl p-6 md:p-8 mt-12 text-gray-900 shadow-2xl">
