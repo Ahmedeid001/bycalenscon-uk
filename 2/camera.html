@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD Mini Camera - عرض خاص</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo & Almarai -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A', // Dark Navy
+                        secondary: '#F1F5F9', // Light Gray
+                        accent: '#DC2626', // Urgent Red for CTAs
+                        highlight: '#3B82F6', // Trust Blue
+                    },
+                    fontFamily: {
+                        sans: ['Almarai', 'sans-serif'],
+                        heading: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Almarai', sans-serif; }
+        h1, h2, h3 { font-family: 'Cairo', sans-serif; }
+        .smooth-scroll { scroll-behavior: smooth; }
+        /* Sticky CTA for Mobile */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .hide-sticky { transform: translateY(100%); }
+    </style>
+</head>
+<body class="bg-white text-gray-800 smooth-scroll">
+
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white text-center py-2 text-sm font-bold">
+        🔥 عرض لفترة محدودة: شحن مجاني عند طلب قطعتين أو أكتر!
+    </div>
+
+    <!-- 1. Hero Section (الانطباع الأول) -->
+    <header class="relative overflow-hidden pt-10 pb-16 lg:pt-20 bg-gradient-to-b from-white to-secondary">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-right">
+                    <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-highlight text-sm font-bold mb-4 border border-blue-200">
+                        ⭐ الأكثر مبيعاً في الأكسسوارات الذكية
+                    </span>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-primary leading-tight mb-6">
+                      أمان بيتك ومكتبك في جيبك<br>
+                        <span class="text-accent">بجودة HD وتصوير ليلي!</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        أصغر كاميرا مراقبة ذكية ممكن تعتمد عليها. راقب بيتك، عربيتك، أو وثق لحظاتك المهمة بصورة كريستال من غير ما حد ياخد باله. 
+                        <br><strong>(بدون أسلاك - بطارية قوية - رؤية ليلية)</strong>
+                    </p>
+                    <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-highlight opacity-10 blur-3xl rounded-full"></div>
+                    <!-- Placeholder for Product Image: Use actual product image here -->
+                    <div class="relative bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 transform rotate-1 hover:rotate-0 transition duration-500">
+                        <img src="https://m.media-amazon.com/images/I/51OR+SMvuuL._SX679_.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="HD Mini Camera" class="w-full rounded-xl object-cover h-[400px]">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg flex items-center gap-3 animate-bounce">
+                            <div class="bg-green-100 p-2 rounded-full">
+                                <i class="fas fa-shield-alt text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">التقييم العام</p>
+                                <div class="text-yellow-400 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#order-section" class="bg-accent hover:bg-red-700 text-white text-xl font-bold py-4 px-8 rounded-full shadow-lg transform transition hover:scale-105 duration-200">
+                            اطلبها دلوقتي وعاين بنفسك 
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500 flex items-center justify-center lg:justify-start gap-2">
+                        <i class="fas fa-check-circle text-green-500"></i> دفع عند الاستلام
+                        <span class="mx-2">|</span>
+                        <i class="fas fa-check-circle text-green-500"></i> ضمان استبدال
+                    </p>
+                </div>
+
+                <!-- Image Content (Visual Hook) -->
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Problem Section (إثارة المشكلة) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold text-primary mb-6">ليه بتضحي بأمانك عشان التكلفة؟</h2>
+            <p class="text-lg text-gray-600 mb-10">
+                كلنا بييجي علينا وقت بنبقى قلقانين فيه.. قلقانين على البيت وإحنا مسافرين، أو على الأولاد مع المربية، أو حتى خايفين على العربية في الشارع.
+                <br><br>
+                بس المشكلة إن كاميرات المراقبة العادية <strong>غالية، كبيرة، وبتحتاج تكسير في الحيطة وأسلاك كتير.</strong>
+                <br>
+                <span class="text-accent font-bold text-xl">عشان كدة جبنالك الحل العملي والذكي!</span>
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 border border-red-100 bg-red-50 rounded-xl">
+                    <i class="fas fa-eye-slash text-red-500 text-3xl mb-3"></i>
+                    <h3 class="font-bold mb-2">بتخاف حد يشوف الكاميرا؟</h3>
+                    <p class="text-sm text-gray-600">كاميراتنا حجمها صغير جداً، تقدر تخفيها في أي مكان بسهولة.</p>
+                </div>
+                <div class="p-6 border border-red-100 bg-red-50 rounded-xl">
+                    <i class="fas fa-moon text-red-500 text-3xl mb-3"></i>
+                    <h3 class="font-bold mb-2">الضلمة بتخوفك؟</h3>
+                    <p class="text-sm text-gray-600">مزودة بـ Night Vision بتصور بوضوح تام حتى في العتمة.</p>
+                </div>
+                <div class="p-6 border border-red-100 bg-red-50 rounded-xl">
+                    <i class="fas fa-plug text-red-500 text-3xl mb-3"></i>
+                    <h3 class="font-bold mb-2">مشكلة الأسلاك؟</h3>
+                    <p class="text-sm text-gray-600">بتشتغل وايرلس وببطارية قوية، ركبها وشغلها في ثواني.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Product Features (المميزات والحل) -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">مميزات تخليك تشتري وأنت مطمن</h2>
+                <p class="text-gray-300">تكنولوجيا متطورة في حجم كف الإيد</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Image side -->
+                <div class="order-2 md:order-1 relative">
+                     <img src="https://m.media-amazon.com/images/I/51Y-Wr0eBCL._SX679_.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Features Display" class="rounded-xl shadow-2xl border-4 border-gray-700">
+                </div>
+                
+                <!-- Features List side -->
+                <div class="order-1 md:order-2 space-y-8">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-highlight rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-video text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">جودة HD 1080p</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">مش هيفوتك أي تفصيلة. الصورة واضحة ونقية جداً سواء صور أو فيديو، عشان تشوف كل حاجة بوضوح.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-highlight rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-running text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">حساس حركة ذكي (Motion Detection)</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">الكاميرا بتفهم! أول ما تحس بأي حركة غريبة بتبدأ تسجل فوراً، عشان توفر مساحة وتديك المفيد.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-highlight rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-magnet text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">قاعدة مغناطيسية قوية</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">مش محتاج شنيور ولا مسامير. الزقها على أي سطح معدني (تلاجة، باب، رف) وهتثبت مكانها.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#order-section" class="inline-block bg-accent hover:bg-red-600 text-white font-bold py-3 px-10 rounded-full transition shadow-lg shadow-red-900/50">
+                            الحق العرض واطلبها دلوقتي
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">رأي الناس اللي جربت الكاميرا</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"كنت فاكرها لعبة بسبب حجمها الصغير، بس بجد انبهرت بجودة الصورة وخصوصاً بالليل. حاططها في المكتب ومطمن جداً."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">م</div>
+                        <div>
+                            <h4 class="font-bold text-sm">محمد علي</h4>
+                            <span class="text-xs text-gray-500">عميل موثوق</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"ممتازة للعربية! استخدمتها كـ Dashcam وصورتها ثابتة وواضحة جداً. وسعرها بالنسبة لإمكانياتها لقطة."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">هـ</div>
+                        <div>
+                            <h4 class="font-bold text-sm">هشام طلعت</h4>
+                            <span class="text-xs text-gray-500">عميل موثوق</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"التوصيل كان سريع جداً، والباكيدج محترمة. جربتها قبل ما استلم والمندوب كان ذوق جداً."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">س</div>
+                        <div>
+                            <h4 class="font-bold text-sm">سارة محمود</h4>
+                            <span class="text-xs text-gray-500">عميل موثوق</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-right">
+                <div class="flex items-center gap-4 flex-col md:flex-row">
+                    <i class="fas fa-box-open text-highlight text-4xl"></i>
+                    <div>
+                        <h3 class="font-bold text-lg">عاين قبل الاستلام</h3>
+                        <p class="text-sm text-gray-500">من حقك تفتح الشحنة وتتأكد من المنتج.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 flex-col md:flex-row">
+                    <i class="fas fa-sync-alt text-highlight text-4xl"></i>
+                    <div>
+                        <h3 class="font-bold text-lg">استبدال مجاني</h3>
+                        <p class="text-sm text-gray-500">ضمان 14 يوم ضد عيوب الصناعة.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 flex-col md:flex-row">
+                    <i class="fas fa-shipping-fast text-highlight text-4xl"></i>
+                    <div>
+                        <h3 class="font-bold text-lg">شحن سريع لكل مصر</h3>
+                        <p class="text-sm text-gray-500">يوصلك لحد باب البيت خلال أيام.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-secondary">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-10">أسئلة ممكن تيجي في بالك</h2>
+            
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-right flex justify-between items-center font-bold focus:outline-none" onclick="toggleFaq('ans1')">
+                        هل الكاميرا بتحتاج واي فاي عشان تشتغل؟
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div id="ans1" class="hidden px-6 py-4 text-gray-600 bg-gray-50 border-t">
+                        لأ مش شرط. الكاميرا بتقدر تسجل على كارت ميموري (SD Card) مباشرة من غير نت، وتقدر تشوف التسجيلات لما توصلها بالكمبيوتر.
+                    </div>
+                </div>
+                
+                <!-- Q2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-right flex justify-between items-center font-bold focus:outline-none" onclick="toggleFaq('ans2')">
+                        البطارية بتفضل شغالة وقت قد إيه؟
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div id="ans2" class="hidden px-6 py-4 text-gray-600 bg-gray-50 border-t">
+                        البطارية بتدوم لحوالي 60-90 دقيقة تصوير متواصل، وممكن توصلها بباور بانك (Power Bank) أو شاحن موبايل لتسجيل مستمر 24 ساعة.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-right flex justify-between items-center font-bold focus:outline-none" onclick="toggleFaq('ans3')">
+                        هل التصوير في الضلمة واضح؟
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div id="ans3" class="hidden px-6 py-4 text-gray-600 bg-gray-50 border-t">
+                        جداً! الكاميرا مزودة بلمبات IR للرؤية الليلية بتشتغل تلقائياً لما الإضاءة تقل، وبتديك صورة واضحة أبيض وأسود.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-right flex justify-between items-center font-bold focus:outline-none" onclick="toggleFaq('ans3')">
+                        هل معاها ضمان؟
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div id="ans3" class="hidden px-6 py-4 text-gray-600 bg-gray-50 border-t">
+أيوه فيه ضمان استبدال لمدة 14 يوم في حالة وجود عيب تصنيع.                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Final CTA / Order Form Area -->
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-gray-400 py-8 text-center text-sm">
+        <p>جميع الحقوق محفوظة &copy; 2024 Zemtrax Store</p>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta md:hidden bg-white border-t border-gray-200 p-3">
+        <a href="#order-section" class="block bg-accent text-white text-center font-bold py-3 rounded-lg shadow-lg">
+            اطلب دلوقتي بسعر العرض 🚀
+        </a>
+    </div>
+
+    <script>
+        function toggleFaq(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
