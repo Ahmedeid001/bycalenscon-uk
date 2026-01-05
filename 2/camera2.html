@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemtrax - الكاميرا الميني HD</title>
+    
+    <!-- استدعاء مكتبة Tailwind CSS للتصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- خطوط عربية (القاهرة + المراعي) -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- إعدادات الألوان والخطوط -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#0F172A',   /* كحلي غامق للثقة */
+                        accent: '#DC2626',  /* أحمر ناري للأزرار */
+                        light: '#F8FAFC',   /* خلفيات فاتحة */
+                        gold: '#F59E0B',    /* للنجوم والتقييم */
+                    },
+                    fontFamily: {
+                        sans: ['Almarai', 'sans-serif'],
+                        heading: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Almarai', sans-serif; }
+        h1, h2, h3, .btn-text { font-family: 'Cairo', sans-serif; }
+        
+        
+        /* حركة بسيطة للزرار لجذب الانتباه */
+        @keyframes pulse-btn {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        .animate-pulse-btn { animation: pulse-btn 2s infinite; }
+        
+        /* Sticky CTA for Mobile */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 pb-20 md:pb-0">
+
+    <!-- شريط العرض العلوي (Scarcity) -->
+    <div class="bg-accent text-white text-center py-2 text-sm font-bold">
+الشحن مجاني لأي مكان في مصر.    </div>
+
+    <!-- الهيدر البسيط -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-black text-brand tracking-tighter">ZEMTRAX</div>
+            <div class="text-sm font-bold text-green-600 flex items-center gap-2">
+                <i class="fas fa-truck"></i> شحن سريع
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section (الانطباع الأول) -->
+    <header class="relative bg-white overflow-hidden">
+        <div class="container mx-auto px-4 py-12 md:py-20 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16">
+            
+            <!-- النص -->
+            <div class="w-full md:w-1/2 text-center md:text-right z-10">
+                <div class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold mb-4">
+                    ⭐ الأكثر مبيعاً في اكسسوارات الأمان
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand leading-tight mb-6">
+                    عينك اللي مابتنمش.. <br>
+                    <span class="text-accent">راقب بيتك 24 ساعة!</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+أصغر كاميرا HD بتشتغل وايرلس. لزقها في أي مكان وراقب بيتك، عربيتك، أو مكتبك من موبايلك صوت وصورة.. حتى في الضلمة!                </p>
+                <div class="flex flex-col gap-3">
+                    <a href="#order-form" class="animate-pulse-btn bg-accent hover:bg-red-700 text-white text-xl font-bold py-4 px-8 rounded-xl shadow-lg transition text-center">
+                        اطلبها دلوقتي وعاين بنفسك 👈
+                    </a>
+                    <p class="text-xs text-gray-500 text-center">
+                        🔒 الدفع عند الاستلام - ضمان استبدال 14 يوم
+                    </p>
+                </div>
+            </div>
+
+            <!-- الصورة -->
+            <div class="w-full md:w-1/2 relative">
+                <!-- دائرة خلفية جمالية -->
+                <div class="absolute top-0 right-0 w-72 h-72 bg-blue-50 rounded-full blur-3xl -z-10 opacity-70"></div>
+                <!-- صورة المنتج (يتم استبدال الرابط بصورة المنتج الحقيقية) -->
+                <img src="https://ae-pic-a1.aliexpress-media.com/kf/S27eb983613f94360ae353eb8cdb3c988Z.jpg_960x960q75.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                     alt="HD Mini Camera" 
+                     class="w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-white transform hover:scale-105 transition duration-500">
+                
+                <!-- بادج عائم -->
+                <div class="absolute -bottom-4 right-10 bg-white p-3 rounded-lg shadow-lg flex items-center gap-3 animate-bounce">
+                    <div class="bg-green-100 p-2 rounded-full text-green-600"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-bold">جودة HD</p>
+                        <p class="text-xs font-bold text-brand">1080p</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Problem Section (إثارة المشكلة) -->
+    <section class="py-16 bg-gray-100 clip-slant">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <h2 class="text-3xl font-bold text-brand mb-8">ليه تخاطر بأمان بيتك وممتلكاتك؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- كارت 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-b-4 border-red-500">
+                    <div class="text-4xl text-red-500 mb-4"><i class="fas fa-car-crash"></i></div>
+                    <h3 class="font-bold text-lg mb-2">خايف على العربية؟</h3>
+                    <p class="text-sm text-gray-600">كل يوم خربشة جديدة ومش عارف مين الفاعل؟</p>
+                </div>
+                <!-- كارت 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-b-4 border-red-500">
+                    <div class="text-4xl text-red-500 mb-4"><i class="fas fa-baby"></i></div>
+                    <h3 class="font-bold text-lg mb-2">قلقان على الأولاد؟</h3>
+                    <p class="text-sm text-gray-600">بتسيبهم مع المربية وعايز تطمن عليهم طول الوقت؟</p>
+                </div>
+                <!-- كارت 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-b-4 border-red-500">
+                    <div class="text-4xl text-red-500 mb-4"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3 class="font-bold text-lg mb-2">السيستم غالي؟</h3>
+                    <p class="text-sm text-gray-600">أنظمة المراقبة العادية مكلفة ومحتاجة تكسير في الحيطة؟</p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <p class="text-xl font-bold text-brand">عشان كده جبنالك الحل الذكي والعملي! 👇</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Features Section (الحل والمميزات) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            
+            <!-- ميزة 1: الحجم -->
+            <div class="flex flex-col md:flex-row items-center gap-10 mb-16">
+                <div class="w-full md:w-1/2">
+                    <img src="https://m.media-amazon.com/images/I/71PxBFyImiL._SX679_.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Small Size" class="rounded-xl shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pr-10">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-4"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <h3 class="text-2xl font-bold text-brand mb-3">حجم سحري.. محدش هيشوفها</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        الكاميرا حجمها صغير جداً (قد العملة المعدنية)، تقدر تخفيها في المكتبة، الستارة، أو حتى تلزقها في العربية من غير ما حد ياخد باله. "الأمان الخفي".
+                    </p>
+                </div>
+            </div>
+
+            <!-- ميزة 2: الرؤية الليلية -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-10 mb-16">
+                <div class="w-full md:w-1/2">
+                    <img src="https://ae-pic-a1.aliexpress-media.com/kf/Se7f8e347efbc4239b32c84da415a6eb6U.jpg_960x960q75.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Night Vision" class="rounded-xl shadow-lg grayscale">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-10 text-right md:text-left"> <!-- Adjusted text align for RTL context usually keeps right but structure implies flow -->
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-4 ml-auto md:ml-0 md:mr-0"><i class="fas fa-moon"></i></div>
+                    <h3 class="text-2xl font-bold text-brand mb-3">بتشوف في الضلمة الكحل</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        مزودة بتقنية الـ Night Vision بالأشعة تحت الحمراء. يعني حتى لو النور قاطع أو المكان ضلمة تماماً، هتشوف كل تفصيلة بوضوح أبيض وأسود.
+                    </p>
+                </div>
+            </div>
+
+             <!-- ميزة 3: التركيب -->
+             <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-1/2">
+                    <img src="https://ae-pic-a1.aliexpress-media.com/kf/S2c230b7570c640a5b21bcead1be8ab708.jpg_960x960q75.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Magnetic Base" class="rounded-xl shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pr-10">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-4"><i class="fas fa-magnet"></i></div>
+                    <h3 class="text-2xl font-bold text-brand mb-3">قاعدة مغناطيس.. لا شنيور ولا مسامير</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        فيها مغناطيس قوي جداً من الضهر. كل اللي عليك تعمله إنك تقربها من أي سطح معدن (تلاجة، باب، رف حديد) وهتلزق فوراً. ركبها وشيلها في ثانية.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Social Proof (رأي الناس) -->
+    <section class="py-16 bg-brand text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10">شوف الناس بتقول إيه؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- ريفيو 1 -->
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+                    <div class="text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> </div>
+<p class="text-gray-200 italic mb-4">"بصراحة مكنتش متخيل إن صورتها حلوة كده بالليل، جربتها في العربية والحمد لله كويسه."</p>
+<h4 class="font-bold">– أحمد كمال (القاهرة)</h4>
+                </div>
+                <!-- ريفيو 2 -->
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+                    <div class="text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-200 italic mb-4">"أحسن حاجة إنها من غير سلك، بحطها في أي مكان وأنا مسافرة وبتابع البيت من الموبايل."</p>
+                    <h4 class="font-bold">– سارة محمود (الجيزة)</h4>
+                </div>
+                <!-- ريفيو 3 -->
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+                    <div class="text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+<p class="text-gray-200 italic mb-4">"المندوب محترم جدا والمنتج ساعدني اتابع في المحل عندي."</p>
+<h4 class="font-bold">– محمد حسن (الإسكندرية)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Guarantee (الضمان) -->
+    <section class="py-10 bg-gray-50 border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-box-open text-3xl text-brand"></i>
+                    <div class="text-right">
+                        <p class="font-bold">عاين قبل الاستلام</p>
+                        <p class="text-xs text-gray-500">افتح الشحنة واتأكد براحتك</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-sync text-3xl text-brand"></i>
+                    <div class="text-right">
+                        <p class="font-bold">استبدال مجاني</p>
+                        <p class="text-xs text-gray-500">ضمان 14 يوم ضد عيوب الصناعة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ (أسئلة شائعة) -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-2xl font-bold text-center text-brand mb-8">أسئلة بتيجي في بالك</h2>
+            <div class="space-y-4">
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand list-none">
+                        هل لازم واي فاي عشان تشتغل؟
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                        لأ مش شرط. الكاميرا ممكن تسجل على كارت ميموري (SD Card) مباشرة من غير نت، وتقدر تشوف التسجيلات بعدين على الكمبيوتر. بس لو عايز تشوف "لايف" من بعيد بتحتاج واي فاي.
+                    </p>
+                </details>
+
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand list-none">
+                        البطارية بتفضل شغالة قد إيه؟
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                        البطارية بتشتغل حوالي 60-90 دقيقة متواصل، والمفاجأة إنك ممكن توصلها بباور بانك (Power Bank) وتسيبيها شغالة طول اليوم!
+                    </p>
+                </details>
+
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand list-none">
+                        هل معاها ضمان؟
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+أيوه فيه ضمان استبدال لمدة 14 يوم في حالة وجود عيب تصنيع.
+                    </p>
+                </details>
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand list-none">
+                        فيه تأخير في البث؟
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+التأخير بسيط جدا ويعتمد علي سرعة الانترنت عندك,في الطبيعي عموما مش هيأثر علي متابعتك                    </p>
+                </details>
+
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brand list-none">
+                        الصورة واضحه قد ايه؟
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+الكاميرا HD يعني هتشوف تفاصيل كويسه في النهار والليل
+كافيه لاحتياجاتك                    </p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- الفوتر -->
+    <footer class="bg-brand text-gray-400 py-8 text-center text-sm mb-16 md:mb-0">
+        <p>جميع الحقوق محفوظة &copy; 2024 Zemtrax Store</p>
+    </footer>
+
+    <!-- الشريط الثابت للموبايل فقط -->
+    <div class="sticky-bar bg-white border-t border-gray-200 p-3 md:hidden">
+        <a href="#order-form" class="block w-full bg-accent text-white text-center font-bold py-3 rounded-lg shadow-md animate-pulse">
+            اطلب دلوقتي بخصم 50% 🚀
+        </a>
+    </div>
+
+</body>
+</html>
